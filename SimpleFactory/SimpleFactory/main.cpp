@@ -7,12 +7,19 @@
 //
 
 #include <iostream>
+#include "Factory.h"
+#include "Operator.h"
 
 int main(int argc, const char * argv[])
 {
-
+    
     // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Factory* factory = new Factory();
+    Operator* whatOperator = factory -> getOperator("+", 4, 5);
+    float result = whatOperator -> getResault();
+    std::cout<<"result is"<<result<<std::endl;
+
     return 0;
 }
 
